@@ -54,7 +54,6 @@
         height: 300px;
         background: url(assets/spine.png) no-repeat center center;
         -webkit-background-size: contain;
-        -moz-background-size: contain;
         -o-background-size: contain;
         background-size: contain;
         margin-top: 3rem;

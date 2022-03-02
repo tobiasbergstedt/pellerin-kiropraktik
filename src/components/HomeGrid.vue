@@ -105,35 +105,30 @@
     .card-1 {
       background: url(assets/grid-card-1.png) no-repeat center center;
       -webkit-background-size: cover;
-      -moz-background-size: cover;
       -o-background-size: cover;
       background-size: cover;
     }
     .card-2 {
       background: url(assets/grid-card-2.png) no-repeat center center;
       -webkit-background-size: cover;
-      -moz-background-size: cover;
       -o-background-size: cover;
       background-size: cover;
     }
     .card-3 {
       background: url(assets/grid-card-3.png) no-repeat center center;
       -webkit-background-size: cover;
-      -moz-background-size: cover;
       -o-background-size: cover;
       background-size: cover;
     }
     .card-4 {
       background: url(assets/grid-card-4.png) no-repeat center center;
       -webkit-background-size: cover;
-      -moz-background-size: cover;
       -o-background-size: cover;
       background-size: cover;
     }
     .card-5 {
       background: url(assets/grid-card-5.png) no-repeat center center;
       -webkit-background-size: cover;
-      -moz-background-size: cover;
       -o-background-size: cover;
       background-size: cover;
     }

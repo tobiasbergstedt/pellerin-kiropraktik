@@ -5,12 +5,16 @@
         <img src="../../assets/logo.png" alt="logo" />
         <p id="company-name">Pellerins Kiropraktik</p>
       </figure>
-      <li v-for="(link, index) in navLinks" :key="index">
-        <router-link :to="link.path">
+      <router-link
+        :to="link.path"
+        v-for="(link, index) in navLinks"
+        :key="index"
+      >
+        <li>
           {{ link.text }}
           <i :class="link.icon" />
-        </router-link>
-      </li>
+        </li>
+      </router-link>
     </ul>
   </nav>
 </template>
@@ -96,7 +100,7 @@
       margin-block-start: 0;
       margin-block-end: 0;
       padding-inline-start: 0;
-      padding-right: 0px;
+      padding-right: 0;
 
       figure {
         cursor: pointer;
@@ -111,9 +115,6 @@
 
       a {
         text-decoration: none;
-        display: flex;
-        flex-direction: row-reverse;
-        align-items: center;
         color: white;
       }
 
@@ -123,6 +124,9 @@
       }
 
       li {
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
         list-style-type: none;
         padding: 15px 30px;
         margin-left: 8px;
@@ -173,21 +177,23 @@
         }
 
         li {
+          flex-direction: row;
+          justify-content: space-between;
           background-color: white;
-          width: 100%;
-          padding-left: 0;
-          padding-right: 1rem;
-          margin-right: 0.5rem;
+          margin-left: 0;
+          padding: 1rem;
           border-radius: 0;
         }
 
-        a {
-          color: #4f7d84;
-          flex-direction: row;
-          margin-left: 20px;
-          justify-content: space-between;
-          margin-right: -20px;
+        i {
+          margin-right: 0;
         }
+
+        a {
+          width: 100%;
+          color: #4f7d84;
+        }
+
         a:hover,
         a:active {
           color: white;

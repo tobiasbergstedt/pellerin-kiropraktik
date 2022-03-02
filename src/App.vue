@@ -19,6 +19,37 @@
     components: {
       NavBar,
       Footer
+    },
+    data() {
+      return {
+        navLinks: [
+          {
+            text: 'Hem',
+            path: '/',
+            icon: 'ion-md-home'
+          },
+          {
+            text: 'Om oss',
+            path: '/about',
+            icon: 'ion-md-people'
+          },
+          {
+            text: 'Recensioner',
+            path: '/reviews',
+            icon: 'ion-md-happy'
+          },
+          {
+            text: 'Kontakt',
+            path: '/contact',
+            icon: 'ion-md-call'
+          },
+          {
+            text: 'Boka tid',
+            path: '/booking',
+            icon: 'ion-md-clock'
+          }
+        ]
+      }
     }
   }
 </script>

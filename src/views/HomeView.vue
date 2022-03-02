@@ -34,7 +34,6 @@
     height: 200px;
     background: url(assets/top-image.png) no-repeat center center;
     -webkit-background-size: cover;
-    -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
     margin: 0 0 1.5rem 0;
