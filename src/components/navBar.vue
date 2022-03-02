@@ -1,21 +1,12 @@
 <template>
-  <nav :style="{ background: background || '#333' }">
-    <ul :style="{ background: background || '#333' }" ref="nav">
+  <nav>
+    <ul ref="nav">
       <figure class="image-logo" @click="toggleNav">
         <img src="../../assets/logo.png" alt="logo" />
+        <p id="company-name">Pellerins Kiropraktik</p>
       </figure>
-      <li
-        v-for="(link, index) in navLinks"
-        :key="index"
-        :style="{ color: linkColor || '#DDD' }"
-        @mouseenter="
-          $event.currentTarget.style.background = hoverBackground || '#999'
-        "
-        @mouseleave="
-          $event.currentTarget.style.background = background || '#333'
-        "
-      >
-        <router-link :to="link.path" :style="{ color: linkColor || '#DDD' }">
+      <li v-for="(link, index) in navLinks" :key="index">
+        <router-link :to="link.path">
           {{ link.text }}
           <i :class="link.icon" />
         </router-link>
@@ -26,16 +17,39 @@
 
 <script>
   export default {
+    data() {
+      return {
+        navLinks: [
+          {
+            text: 'Hem',
+            path: '/',
+            icon: 'ion-md-home'
+          },
+          {
+            text: 'Om oss',
+            path: '/about',
+            icon: 'ion-md-people'
+          },
+          {
+            text: 'Recensioner',
+            path: '/reviews',
+            icon: 'ion-md-happy'
+          },
+          {
+            text: 'Kontakt',
+            path: '/contact',
+            icon: 'ion-md-call'
+          },
+          {
+            text: 'Boka tid',
+            path: '/booking',
+            icon: 'ion-md-clock'
+          }
+        ]
+      }
+    },
     props: {
-      navLinks: {
-        default: () => [],
-        type: Array
-      },
       background: {
-        default: '',
-        type: String
-      },
-      linkColor: {
         default: '',
         type: String
       },
@@ -59,18 +73,22 @@
 
 <style scoped lang="scss">
   img {
-    width: 150px;
-    height: 40px;
+    width: 60px;
+    height: 60px;
   }
 
   nav {
     height: 80px;
     width: 100%;
-    box-shadow: 2px 2px 2px 2px rgb(230, 230, 230);
+    background-color: #4f7d84;
+    color: white;
+    border-bottom: 3px solid #e3d0b9;
     .image-logo {
-      flex-grow: 4;
+      flex-grow: 1;
+      padding: 0.5rem 0 0.25rem 1rem;
     }
     ul {
+      background-color: #4f7d84;
       display: flex;
       height: 100%;
       width: 100%;
@@ -83,6 +101,12 @@
       figure {
         cursor: pointer;
         margin-right: 10px;
+        display: flex;
+        align-items: center;
+        #company-name {
+          margin-left: 2rem;
+          font-size: 1.25rem;
+        }
       }
 
       a {
@@ -90,22 +114,38 @@
         display: flex;
         flex-direction: row-reverse;
         align-items: center;
+        color: white;
       }
 
       i {
         margin-right: 20px;
-        font-size: 22px;
+        font-size: 28px;
       }
 
       li {
         list-style-type: none;
-        padding: 10px 20px;
+        padding: 15px 30px;
+        margin-left: 8px;
+        background-color: #4f7d84;
+        border-radius: 1rem;
+      }
+      li:hover,
+      li:focus,
+      li:active {
+        background-color: #3b6369;
       }
     }
   }
 
   @media screen and (max-width: 1085px) {
     nav {
+      box-shadow: none;
+      .image-logo {
+        padding-left: 1.5rem;
+        margin-top: 0.8rem;
+        padding-bottom: 10px;
+        margin-right: 0;
+      }
       ul {
         z-index: 1;
         position: fixed;
@@ -115,7 +155,8 @@
         left: -255px;
         transition: 300ms ease all;
         top: 80px;
-        box-shadow: 2px 2px 2px 2px rgb(230, 230, 230);
+        background-color: white;
+        outline: 3px solid #4f7d84;
 
         &.active {
           left: 0px;
@@ -123,23 +164,24 @@
 
         figure {
           position: fixed;
-          top: -16px;
-          left: -40px;
-          background-color: white;
-          padding-left: 42px;
-          padding-top: 26px;
-          padding-bottom: 10px;
+          top: -13px;
+          left: 0px;
+          background-color: #4f7d84;
+          padding: 26px 40px 10px 2px;
           width: 100%;
-          box-shadow: 2px 2px 2px 2px rgb(230, 230, 230);
+          outline: 3px solid #e3d0b9;
         }
 
         li {
+          background-color: white;
           width: 100%;
           padding-left: 0;
-          padding-right: 10px;
+          padding-right: 0.5rem;
+          margin-right: 1rem;
         }
 
         a {
+          color: #4f7d84;
           flex-direction: row;
           margin-left: 20px;
           justify-content: space-between;

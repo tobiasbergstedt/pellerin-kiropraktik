@@ -1,1 +1,1 @@
-# Website project for Pellerins Kiropraktik.
+# Website project for Pellerins Kiropraktik - Kiropraktik för alla.

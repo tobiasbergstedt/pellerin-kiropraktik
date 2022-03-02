@@ -1,35 +1,43 @@
+<template>
+  <NavBar
+    :nav-links="navLinks"
+    background="#fff"
+    link-color="#777"
+    hover-background="#ddd"
+  />
+  <main>
+    <RouterView />
+  </main>
+  <Footer />
+</template>
+
 <script>
-  import CitiesList from './components/CitiesList.vue'
-  import CounterButton from './components/CounterButton.vue'
-  import HelloWorld from './components/HelloWorld.vue'
+  import NavBar from './components/NavBar.vue'
+  import Footer from './components/FooterComponent.vue'
 
   export default {
     components: {
-      CitiesList,
-      CounterButton,
-      HelloWorld
+      NavBar,
+      Footer
     }
   }
 </script>
 
-<template>
-  <nav>
-    <ul>
-      <li>
-        <RouterLink to="/">Hem</RouterLink>
-      </li>
-      <li>
-        <RouterLink to="/about">Om</RouterLink>
-      </li>
-      <li>
-        <RouterLink to="/contact">Kontakt</RouterLink>
-      </li>
-    </ul>
-  </nav>
-  <HelloWorld msg="Hello World!" />
-  <CitiesList />
-  <CounterButton />
-  <main>
-    <RouterView />
-  </main>
-</template>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap');
+  @import 'https://unpkg.com/ionicons@4.2.2/dist/css/ionicons.min.css';
+
+  html {
+    font-family: 'Roboto', sans-serif;
+  }
+
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    background-color: white;
+  }
+</style>
