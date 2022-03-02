@@ -137,7 +137,7 @@
     }
   }
 
-  @media screen and (max-width: 1085px) {
+  @media screen and (max-width: 1023px) {
     nav {
       box-shadow: none;
       .image-logo {
@@ -176,8 +176,9 @@
           background-color: white;
           width: 100%;
           padding-left: 0;
-          padding-right: 0.5rem;
-          margin-right: 1rem;
+          padding-right: 1rem;
+          margin-right: 0.5rem;
+          border-radius: 0;
         }
 
         a {
@@ -186,6 +187,10 @@
           margin-left: 20px;
           justify-content: space-between;
           margin-right: -20px;
+        }
+        a:hover,
+        a:active {
+          color: white;
         }
       }
     }
