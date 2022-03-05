@@ -1,14 +1,19 @@
 <template>
-  <h1>Recensioner</h1>
+  <VideoBackground />
   <ReviewCards />
+  <LeaveReview />
 </template>
 
 <script>
   import ReviewCards from '../components/ReviewCards.vue'
+  import VideoBackground from '../components/VideoBackground.vue'
+  import LeaveReview from '../components/LeaveReview.vue'
 
   export default {
     components: {
-      ReviewCards
+      ReviewCards,
+      VideoBackground,
+      LeaveReview
     }
   }
 </script>

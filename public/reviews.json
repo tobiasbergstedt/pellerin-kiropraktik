@@ -2,60 +2,35 @@
   {
     "id": "0",
     "name": "Anders, Båstad",
+    "date": "12 augusti 2021",
     "header": "Bästa kiropraktorn!",
-    "testimony": "Anna är den bästa kiropraktorn jag någonsin besökt. Hennes passion för kiropraktik är något som verkligen lyser igenom när man pratar med henne, och den expertis hon besitter är helt makalös. Jag kan varmt rekommendera ett besök hos henne."
+    "testimony": "Anna är den bästa kiropraktorn jag någonsin besökt. Hennes passion för kiropraktik är något som verkligen lyser igenom när man pratar med henne, och den expertis hon besitter är helt makalös. Jag kan varmt rekommendera ett besök hos henne. "
   },
   {
     "id": "1",
     "name": "Erika, 34 år",
+    "date": "12 augusti 2021",
     "header": "Rekommenderar varmt",
     "testimony": "Anna är den bästa kiropraktorn jag någonsin besökt. Hennes expertis är helt makalös. Jag kan varmt rekommendera ett besök hos henne."
   },
   {
     "id": "2",
     "name": "Malin Albrektsson",
+    "date": "12 augusti 2021",
     "header": "Sååååå duktig!!!!",
     "testimony": "Annas passion för kiropraktik är något som verkligen lyser igenom när man pratar med henne, och den expertis hon besitter är helt makalös. Jag kan varmt rekommendera ett besök hos henne."
   },
   {
     "id": "3",
     "name": "Sven-Göran",
+    "date": "12 augusti 2021",
     "header": "Tack",
     "testimony": "Annas expertis hon besitter är helt makalös. Jag kan varmt rekommendera ett besök hos henne."
   },
   {
     "id": "4",
     "name": "Ingalill S",
-    "header": "En sån go' tjej!",
-    "testimony": "Anna är den bästa kiropraktorn jag någonsin besökt. Hennes passion för kiropraktik är något som verkligen lyser igenom när man pratar med henne. Jag kan varmt rekommendera ett besök hos henne."
-  },
-  {
-    "id": "5",
-    "name": "Anders, Båstad",
-    "header": "Bästa kiropraktorn!",
-    "testimony": "Anna är den bästa kiropraktorn jag någonsin besökt. Hennes passion för kiropraktik är något som verkligen lyser igenom när man pratar med henne, och den expertis hon besitter är helt makalös. Jag kan varmt rekommendera ett besök hos henne."
-  },
-  {
-    "id": "6",
-    "name": "Erika, 34 år",
-    "header": "Rekommenderar varmt",
-    "testimony": "Anna är den bästa kiropraktorn jag någonsin besökt. Hennes expertis är helt makalös. Jag kan varmt rekommendera ett besök hos henne."
-  },
-  {
-    "id": "7",
-    "name": "Malin Albrektsson",
-    "header": "Sååååå duktig!!!!",
-    "testimony": "Annas passion för kiropraktik är något som verkligen lyser igenom när man pratar med henne, och den expertis hon besitter är helt makalös. Jag kan varmt rekommendera ett besök hos henne."
-  },
-  {
-    "id": "8",
-    "name": "Sven-Göran",
-    "header": "Tack",
-    "testimony": "Annas expertis hon besitter är helt makalös. Jag kan varmt rekommendera ett besök hos henne."
-  },
-  {
-    "id": "9",
-    "name": "Ingalill S",
+    "date": "12 augusti 2021",
     "header": "En sån go' tjej!",
     "testimony": "Anna är den bästa kiropraktorn jag någonsin besökt. Hennes passion för kiropraktik är något som verkligen lyser igenom när man pratar med henne. Jag kan varmt rekommendera ett besök hos henne."
   }

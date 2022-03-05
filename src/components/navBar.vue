@@ -2,8 +2,9 @@
   <nav>
     <ul ref="nav">
       <figure class="image-logo" @click="toggleNav">
-        <img src="../../assets/logo.png" alt="logo" />
-        <p id="company-name">Pellerins Kiropraktik</p>
+        <img id="hamburger" src="../../assets/hamburger.png" alt="logo" />
+        <img id="logo" src="../../assets/logo.png" alt="logo" />
+        <p id="company-name">Pellerin Kiropraktik</p>
       </figure>
       <router-link
         :to="link.path"
@@ -76,11 +77,15 @@
 </script>
 
 <style scoped lang="scss">
-  img {
+  #logo {
     width: 60px;
     height: 60px;
   }
-
+  #hamburger {
+    width: 50px;
+    height: 50px;
+    display: none;
+  }
   nav {
     height: 80px;
     width: 100%;
@@ -89,7 +94,7 @@
     border-bottom: 3px solid #e3d0b9;
     .image-logo {
       flex-grow: 1;
-      padding: 0.5rem 0 0.25rem 1rem;
+      padding: 0.5rem 0 10px 1.5rem;
     }
     ul {
       background-color: #4f7d84;
@@ -119,7 +124,7 @@
       }
 
       i {
-        margin-right: 20px;
+        margin-right: 1rem;
         font-size: 28px;
       }
 
@@ -128,7 +133,7 @@
         flex-direction: row-reverse;
         align-items: center;
         list-style-type: none;
-        padding: 15px 30px;
+        padding: 15px 20px;
         margin-left: 8px;
         background-color: #4f7d84;
         border-radius: 1rem;
@@ -141,7 +146,23 @@
     }
   }
 
+  @media screen and (min-width: 1200px) {
+    nav {
+      ul {
+        li {
+          padding: 15px 35px;
+        }
+      }
+    }
+  }
+
   @media screen and (max-width: 1023px) {
+    #logo {
+      margin-left: 1.2rem;
+    }
+    #hamburger {
+      display: block;
+    }
     nav {
       box-shadow: none;
       .image-logo {
@@ -151,7 +172,7 @@
         margin-right: 0;
       }
       ul {
-        z-index: 1;
+        z-index: 10;
         position: fixed;
         width: 250px;
         height: 100%;
@@ -174,6 +195,10 @@
           padding: 26px 40px 10px 2px;
           width: 100%;
           outline: 3px solid #e3d0b9;
+
+          #company-name {
+            margin-left: 1rem;
+          }
         }
 
         li {

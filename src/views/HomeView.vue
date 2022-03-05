@@ -29,6 +29,7 @@
 <style lang="scss" scoped>
   h1 {
     color: white;
+    text-shadow: 3px 3px 2px rgba(0, 0, 0, 0.5);
   }
   #motivational-img-quote {
     height: 200px;
@@ -39,6 +40,7 @@
     margin: 0 0 1.5rem 0;
     border-bottom-left-radius: 50% 15%;
     border-bottom-right-radius: 50% 15%;
+    overflow: hidden;
     #overlay {
       background-color: rgba(0, 0, 0, 0.6);
       height: 100%;
@@ -46,8 +48,6 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      border-bottom-left-radius: 50% 15%;
-      border-bottom-right-radius: 50% 15%;
     }
   }
 
