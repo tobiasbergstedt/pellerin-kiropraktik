@@ -36,7 +36,7 @@
     }
   }
 
-  @media screen and (min-width: 980px) {
+  @media screen and (min-width: 768px) {
     footer {
       display: flex;
       align-items: center;

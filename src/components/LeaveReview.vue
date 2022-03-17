@@ -11,6 +11,7 @@
         </p>
         <div id="review-links">
           <router-link
+            class="button"
             :to="link.path"
             v-for="(link, index) in navLinks"
             :key="index"
@@ -55,9 +56,7 @@
     #info-container {
       padding: 1rem 2rem;
       h2 {
-        margin-bottom: 1rem;
-      }
-      p {
+        margin-top: 1rem;
         margin-bottom: 1rem;
       }
       .left {
@@ -74,19 +73,9 @@
           justify-content: space-evenly;
           a {
             text-decoration: none;
-            font-size: 1.4rem;
-            background-color: #4f7d84;
-            color: white;
-            margin-bottom: 0.5rem;
-            padding: 0.5rem 1rem;
-            border-radius: 0.5rem;
             i {
               margin-right: 0.5rem;
             }
-          }
-          a:hover,
-          a:focus {
-            background-color: #3b5f64;
           }
         }
       }
