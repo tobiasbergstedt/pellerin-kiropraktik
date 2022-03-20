@@ -16,6 +16,12 @@
           <i :class="link.icon" />
         </li>
       </router-link>
+      <a href="https://pellerin.bokadirekt.se">
+        <li>
+          Boka tid
+          <i class="ion-md-clock" />
+        </li>
+      </a>
     </ul>
   </nav>
 </template>
@@ -44,11 +50,6 @@
             text: 'Kontakt',
             path: '/contact',
             icon: 'ion-md-call'
-          },
-          {
-            text: 'Boka tid',
-            path: '/booking',
-            icon: 'ion-md-clock'
           }
         ]
       }

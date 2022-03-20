@@ -177,6 +177,7 @@
     text-align: center;
     border-radius: 0.5rem;
     background-color: #4f7e84;
+    box-shadow: 0px 3px 4px 1px rgba(0, 0, 0, 0.25);
     margin-top: 1.5rem;
     padding: 20px;
     width: 100%;
@@ -243,6 +244,7 @@
   #map-container {
     height: 500px;
     width: 100%;
+    box-shadow: 0px 3px 4px 1px rgba(0, 0, 0, 0.25);
     border-radius: 0.5rem;
     overflow: hidden;
   }

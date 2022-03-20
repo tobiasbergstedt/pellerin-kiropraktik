@@ -14,7 +14,7 @@
   video {
     border-radius: 1rem;
     box-shadow: 0 3px 4px 1px rgba(0, 0, 0, 0.25);
-    width: 325px;
+    width: 343px;
   }
 
   @media screen and (min-width: 768px) {

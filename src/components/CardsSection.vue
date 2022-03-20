@@ -3,34 +3,43 @@
     <h2>Vi finns här för dig</h2>
     <div class="cards-items-container">
       <div class="cards-item">
-        <img src="assets/token.png" alt="" />
-        <h1>Rubrik</h1>
-        <p>
-          1Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis
-          consequuntur dolores iste! Qui alias obcaecati sequi, eligendi commodi
-          optio quam dignissimos!
-        </p>
-        <a href="#">Länk</a>
+        <router-link :to="'/about'" key="about">
+          <img src="assets/cards-section-1.png" alt="Picture of the team" />
+        </router-link>
+        <router-link :to="'/about'" key="about">
+          <h1>Det här är Pellerin</h1>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis
+            consequuntur dolores iste! Qui alias obcaecati sequi, eligendi
+            commodi optio quam dignissimos!
+          </p>
+        </router-link>
       </div>
       <div class="cards-item">
-        <img src="assets/token.png" alt="" />
-        <h1>Rubrik</h1>
-        <p>
-          2Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis
-          consequuntur dolores iste! Qui alias obcaecati sequi, eligendi commodi
-          optio quam dignissimos!
-        </p>
-        <a href="#">Länk</a>
+        <a href="https://pellerin.bokadirekt.se">
+          <img src="assets/cards-section-2.png" alt="" />
+        </a>
+        <a href="https://pellerin.bokadirekt.se">
+          <h1>Boka tid</h1>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis
+            consequuntur dolores iste! Qui alias obcaecati sequi, eligendi
+            commodi optio quam dignissimos!
+          </p>
+        </a>
       </div>
       <div class="cards-item">
-        <img src="assets/token.png" alt="" />
-        <h1>Rubrik</h1>
-        <p>
-          3Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis
-          consequuntur dolores iste! Qui alias obcaecati sequi, eligendi commodi
-          optio quam dignissimos!
-        </p>
-        <a href="#">Länk</a>
+        <router-link :to="'/contact'" key="contact">
+          <img src="assets/cards-section-3.png" alt="" />
+        </router-link>
+        <router-link :to="'/contact'" key="about">
+          <h1>Kom i kontakt</h1>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis
+            consequuntur dolores iste! Qui alias obcaecati sequi, eligendi
+            commodi optio quam dignissimos!
+          </p>
+        </router-link>
       </div>
     </div>
   </div>
@@ -45,29 +54,49 @@
     text-align: center;
     h2 {
       margin-bottom: 1rem;
-      text-transform: uppercase;
     }
     .cards-items-container {
-      display: block;
-      height: 100%;
+      display: grid;
+      justify-items: center;
+      grid-template-columns: 1fr;
+      margin-left: auto;
+      margin-right: auto;
+      gap: 1rem;
       .cards-item {
         display: flex;
         flex-direction: column;
         align-items: center;
         background-color: white;
-        margin: 1rem;
-        max-width: 100%;
-        height: 100%;
+        margin: 0 1rem;
+        width: 320px;
+        height: 350px;
         border-radius: 0.5rem;
         box-shadow: 0 3px 4px 1px rgba(0, 0, 0, 0.25);
-        a {
-          margin-top: 0.5rem;
-          color: #976b52;
-          text-decoration: none;
+        overflow: hidden;
+        img {
+          width: 100%;
+          outline: 3px solid #e3d0b9;
+          &:hover {
+            outline: 3px solid #c9ab87;
+          }
         }
-        a:hover,
-        a:focus {
-          color: black;
+        h1 {
+          margin-top: 0.8rem;
+          margin-bottom: 4px;
+
+          padding-right: 1rem;
+          padding-left: 1rem;
+        }
+        p {
+          padding: 0 1rem 1rem 1rem;
+        }
+        a {
+          color: #4f7d84;
+          text-decoration: none;
+          &:hover,
+          &:focus {
+            color: #295b63;
+          }
         }
       }
     }
@@ -79,12 +108,8 @@
         margin-bottom: 0;
       }
       .cards-items-container {
-        display: flex;
-        height: 400px;
-        padding-bottom: 3rem;
+        grid-template-columns: 1fr 1fr;
         .cards-item {
-          padding: 1rem;
-          margin: 1rem;
           height: 100%;
         }
       }
@@ -94,19 +119,24 @@
   @media screen and (min-width: 1024px) {
     #cards-container {
       h2 {
-        margin-bottom: -1rem;
+        margin-bottom: 1rem;
       }
+    }
+  }
+
+  @media screen and (min-width: 1100px) {
+    #cards-container {
       .cards-items-container {
-        display: flex;
-        height: 400px;
-        margin-left: 150px;
-        margin-right: 150px;
-        padding-bottom: 3rem;
-        .cards-item {
-          padding: 1rem;
-          margin: 2rem;
-          height: 100%;
-        }
+        grid-template-columns: 1fr 1fr 1fr;
+        width: 1100px;
+      }
+    }
+  }
+
+  @media screen and (min-width: 1400px) {
+    #cards-container {
+      h2 {
+        margin-bottom: 1rem;
       }
     }
   }
