@@ -1,5 +1,18 @@
 <template>
-  <div class="grid">
+  <div class="grid" v-if="!isLoading">
+    <!-- <div
+      v-for="post in customerTypeLinks"
+      :key="post.id"
+      class="list-complete-item"
+      :style="getItemBackground(post)"
+    >
+      <div class="before-text">{{ post.title.rendered }}</div>
+      <div class="overlay">
+        <div class="text" v-html="post.content.rendered" />
+        <div class="after-text">{{ post.title.rendered }}</div>
+      </div>
+    </div> -->
+
     <div class="list-complete-item card-1">
       <div class="before-text">Vuxna</div>
       <div class="overlay">
@@ -81,7 +94,60 @@
   </div>
 </template>
 
-<script></script>
+<script>
+  export default {
+    data() {
+      return {
+        isLoading: true,
+        customerTypeLinks: []
+      }
+    },
+    methods: {
+      async getData() {
+        try {
+          let response = await fetch(
+            'http://localhost/index.php/wp-json/wp/v2/customer-type-link'
+          )
+          this.customerTypeLinks = await response.json()
+          // console.log(
+          //   'http://localhost/wp-json/wp/v2/media/' +
+          //     this.customerTypeLinks[0].featured_media
+          // )
+          for (const item of this.customerTypeLinks) {
+            if (item.featured_media) {
+              try {
+                let response = await fetch(
+                  'http://localhost/wp-json/wp/v2/media/' + item.featured_media
+                )
+                item.media = await response.json()
+                // console.log(item.media.source_url)
+              } catch (error) {
+                console.error(error)
+              }
+            }
+          }
+        } catch (error) {
+          console.log(error)
+        }
+        this.isLoading = false
+      },
+      getItemBackground(item) {
+        if (item.media && item.media.source_url) {
+          return {
+            backgroundImage: `url(${item.media.source_url})`
+          }
+        } else {
+          return {
+            backgroundColor: '#4f7d84'
+          }
+        }
+      }
+    },
+    created() {
+      this.getData()
+    }
+  }
+</script>
 
 <style lang="scss" scoped>
   .grid {
@@ -101,36 +167,26 @@
       overflow: hidden;
       display: flex;
       align-items: flex-end;
+      background-position: center center;
+      background-repeat: no-repeat;
+      -webkit-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
     }
     .card-1 {
-      background: url(assets/grid-card-1.png) no-repeat center center;
-      -webkit-background-size: cover;
-      -o-background-size: cover;
-      background-size: cover;
+      background-image: url(assets/grid-card-1.png);
     }
     .card-2 {
-      background: url(assets/grid-card-2.png) no-repeat center center;
-      -webkit-background-size: cover;
-      -o-background-size: cover;
-      background-size: cover;
+      background-image: url(assets/grid-card-2.png);
     }
     .card-3 {
-      background: url(assets/grid-card-3.png) no-repeat center center;
-      -webkit-background-size: cover;
-      -o-background-size: cover;
-      background-size: cover;
+      background-image: url(assets/grid-card-3.png);
     }
     .card-4 {
-      background: url(assets/grid-card-4.png) no-repeat center center;
-      -webkit-background-size: cover;
-      -o-background-size: cover;
-      background-size: cover;
+      background-image: url(assets/grid-card-4.png);
     }
     .card-5 {
-      background: url(assets/grid-card-5.png) no-repeat center center;
-      -webkit-background-size: cover;
-      -o-background-size: cover;
-      background-size: cover;
+      background-image: url(assets/grid-card-5.png);
     }
     .card-6 {
       background-color: #4f7d84;

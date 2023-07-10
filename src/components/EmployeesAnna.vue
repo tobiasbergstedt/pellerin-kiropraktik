@@ -24,7 +24,7 @@
         </slot>
       </div>
       <div id="right">
-        <img src="assets/Back+doctor.jpg" alt="Photo of Anna" />
+        <img src="/assets/Back+doctor.jpg" alt="Photo of Anna" />
       </div>
     </div>
   </div>

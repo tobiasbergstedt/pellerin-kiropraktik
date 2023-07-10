@@ -1,6 +1,6 @@
 <template>
   <div class="video-container">
-    <video src="assets/temp-video.mp4" controls poster="assets/video.png" />
+    <video src="/assets/bg-video.mp4" controls poster="/assets/video.png" />
   </div>
 </template>
 

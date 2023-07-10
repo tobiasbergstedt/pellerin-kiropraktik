@@ -8,7 +8,7 @@
         </p>
         <div class="space-filler" />
         <div class="signature">
-          <img src="assets/grid-card-1.png" alt="" />
+          <img src="/assets/grid-card-1.png" alt="" />
           <div class="personal-info">
             <p>{{ review.name }}</p>
             <p>{{ review.date }}</p>

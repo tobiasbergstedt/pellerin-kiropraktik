@@ -21,7 +21,7 @@
         <p>3D-animation och visualisering. (Högskolan Väst, 2014)</p>
       </div>
       <div id="right">
-        <img src="assets/Back+doctor.jpg" alt="Photo of Tobias" />
+        <img src="/assets/Back+doctor.jpg" alt="Photo of Tobias" />
       </div>
     </div>
   </div>

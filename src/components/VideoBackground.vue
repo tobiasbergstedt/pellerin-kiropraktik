@@ -1,8 +1,8 @@
 <template>
   <div class="video-wrapper">
     <h1>Vad våra kunder tycker om oss</h1>
-    <video playsinline autoplay muted loop poster="assets/video.png">
-      <source src="assets/bg-video.mp4" type="video/mp4" />
+    <video playsinline autoplay muted loop poster="/assets/video.png">
+      <source src="/assets/bg-video.mp4" type="video/mp4" />
       Your browser does not support the video tag.
     </video>
   </div>

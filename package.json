@@ -15,7 +15,7 @@
   },
   "name": "my-project",
   "scripts": {
-    "build": "vite build",
+    "build": "vite build --base=./",
     "dev": "vite",
     "preview": "vite preview"
   },

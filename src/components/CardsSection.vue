@@ -4,7 +4,7 @@
     <div class="cards-items-container">
       <div class="cards-item">
         <router-link :to="'/about'" key="about">
-          <img src="assets/cards-section-1.png" alt="Picture of the team" />
+          <img src="/assets/cards-section-1.png" alt="Picture of the team" />
         </router-link>
         <router-link :to="'/about'" key="about">
           <h1>Det här är Pellerin</h1>
@@ -17,7 +17,7 @@
       </div>
       <div class="cards-item">
         <a href="https://pellerin.bokadirekt.se">
-          <img src="assets/cards-section-2.png" alt="" />
+          <img src="/assets/cards-section-2.png" alt="" />
         </a>
         <a href="https://pellerin.bokadirekt.se">
           <h1>Boka tid</h1>
@@ -30,7 +30,7 @@
       </div>
       <div class="cards-item">
         <router-link :to="'/contact'" key="contact">
-          <img src="assets/cards-section-3.png" alt="" />
+          <img src="/assets/cards-section-3.png" alt="" />
         </router-link>
         <router-link :to="'/contact'" key="about">
           <h1>Kom i kontakt</h1>
