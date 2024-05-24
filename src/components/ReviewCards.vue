@@ -6,7 +6,7 @@
         <p>
           {{ review.testimony }}
         </p>
-        <div class="space-filler" />
+        <!-- <div class="space-filler" /> -->
         <div class="signature">
           <img src="/assets/grid-card-1.png" alt="" />
           <div class="personal-info">
@@ -33,7 +33,7 @@
 
 <style lang="scss" scoped>
   #cards-container {
-    color: #4f7d84;
+    color: var(--color-primary);
     margin-top: 1rem;
     margin-bottom: 1rem;
     text-align: center;
@@ -44,12 +44,13 @@
       row-gap: 1rem;
       margin: 0 2rem 1rem 2rem;
       .cards-item {
-        position: relative;
+        display: flex;
+        flex-direction: column;
         justify-self: center;
-        display: block;
-        background-color: white;
+        // display: block;
+        background-color: var(--color-white);
         margin: 0;
-        padding: 0.5rem;
+        padding: 0.5rem 0 0;
         max-width: 350px;
         max-height: 100%;
         border-radius: 0.5rem;
@@ -57,6 +58,12 @@
         overflow: hidden;
         h2 {
           margin-bottom: 0.5rem;
+          padding: 0 1rem;
+        }
+        > p {
+          margin-bottom: 24px;
+          padding: 0 1rem;
+          flex: 1;
         }
         .space-filler {
           align-self: baseline;
@@ -68,16 +75,9 @@
           justify-content: center;
           font-size: 1rem;
           padding: 0.5rem;
-          position: absolute;
-          width: 100%;
-          // border-top: 3px solid #3d6870;
-          // background-color: #e5f0f3;
-          // color: #3d6870;
-          border-top: 3px solid #e3d0b9;
-          background-color: #4f7d84;
-          color: white;
-          bottom: 0;
-          left: 0;
+          border-top: 3px solid var(--color-secondary);
+          background-color: var(--color-primary);
+          color: var(--color-white);
           .personal-info {
             margin-left: 1.2rem;
             p {
@@ -114,8 +114,7 @@
       .cards-items-container {
         grid-template-columns: 1fr 1fr;
         row-gap: 1rem;
-        margin-left: 50px;
-        margin-right: 50px;
+        max-width: var(--max-width-container);
       }
     }
   }
@@ -123,10 +122,10 @@
   @media screen and (min-width: 1400px) {
     #cards-container {
       .cards-items-container {
-        margin-left: 150px;
-        margin-right: 150px;
+        margin-left: auto;
+        margin-right: auto;
         .cards-item {
-          min-height: 300px;
+          // min-height: 300px;
           h2 {
             margin-top: 1rem;
           }
@@ -143,8 +142,6 @@
     #cards-container {
       .cards-items-container {
         grid-template-columns: 1fr 1fr 1fr;
-        margin-left: 150px;
-        margin-right: 150px;
       }
     }
   }

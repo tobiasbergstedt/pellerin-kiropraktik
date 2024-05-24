@@ -38,8 +38,8 @@
 
 <style lang="scss" scoped>
   #middle-container {
-    background-color: #4f7d84;
-    color: white;
+    background-color: var(--color-primary);
+    color: var(--color-white);
     margin-bottom: 3rem;
     text-align: center;
     #info-container {

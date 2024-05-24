@@ -32,9 +32,9 @@
 <style lang="scss" scoped>
   .employees-container {
     width: 100%;
-    color: white;
+    color: var(--color-white);
     .employees-content {
-      background-color: #4f7e84;
+      background-color: var(--color-primary);
       box-shadow: 0px 3px 4px 1px rgba(0, 0, 0, 0.25);
       border-radius: 1rem;
       padding: 1rem;

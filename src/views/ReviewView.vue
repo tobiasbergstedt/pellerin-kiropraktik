@@ -1,18 +1,25 @@
 <template>
-  <VideoBackground />
+  <!-- <VideoBackground /> -->
+  <HeroSection
+    is-video
+    source="/assets/bg-video.mp4"
+    title="What our clients think about us"
+  />
   <ReviewCards />
   <LeaveReview />
 </template>
 
 <script>
   import ReviewCards from '../components/ReviewCards.vue'
-  import VideoBackground from '../components/VideoBackground.vue'
+  // import VideoBackground from '../components/VideoBackground.vue'
+  import HeroSection from '../components/HeroSection.vue'
   import LeaveReview from '../components/LeaveReview.vue'
 
   export default {
     components: {
       ReviewCards,
-      VideoBackground,
+      HeroSection,
+      // VideoBackground,
       LeaveReview
     }
   }
@@ -20,7 +27,7 @@
 
 <style lang="scss" scoped>
   h1 {
-    color: #4f7d84;
+    color: var(--color-primary);
     text-align: center;
     margin-top: 0.75rem;
   }

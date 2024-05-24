@@ -3,11 +3,11 @@
     <div id="info-container">
       <div class="left" />
       <div class="right">
-        <h2>Vill du lämna ett omdöme?</h2>
+        <h2>Want to leave a review?</h2>
         <p>
-          Enklast är att efter besök gå in på länken i mailet från Bokadirekt
-          och fylla i recension på bokadirekt.se. Annars kan du skriva en
-          recension på vår Facebook-sida eller skicka oss ett mail.
+          The easiest way is to go to the link in the email from Bokadirekt
+          after your visit and fill in a review on bokadirekt.se. Otherwise, you
+          can write a review on our Facebook page or send us an email.
         </p>
         <div id="review-links">
           <router-link
@@ -48,13 +48,13 @@
 
 <style lang="scss" scoped>
   #middle-container {
-    background-color: #e3d0b9;
-    color: #3b5f64;
+    background-color: var(--color-secondary);
+    color: var(--color-primary-darkest);
     margin-top: 2rem;
     margin-bottom: 2rem;
     text-align: center;
     #info-container {
-      padding: 1rem 2rem;
+      padding: 1rem 0;
       h2 {
         margin-top: 1rem;
         margin-bottom: 1rem;
@@ -71,8 +71,13 @@
           display: flex;
           flex-direction: column;
           justify-content: space-evenly;
+          row-gap: 2rem;
+          padding: 1rem 0;
           a {
             text-decoration: none;
+            max-width: fit-content;
+            margin-left: auto;
+            margin-right: auto;
             i {
               margin-right: 0.5rem;
             }

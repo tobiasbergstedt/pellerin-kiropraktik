@@ -1,6 +1,6 @@
 <template>
   <div class="video-wrapper">
-    <h1>Vad våra kunder tycker om oss</h1>
+    <h1>What our clients think about us</h1>
     <video playsinline autoplay muted loop poster="/assets/video.png">
       <source src="/assets/bg-video.mp4" type="video/mp4" />
       Your browser does not support the video tag.
@@ -13,7 +13,7 @@
 <style lang="scss" scoped>
   h1 {
     z-index: 1;
-    color: white;
+    color: var(--color-white);
     text-shadow: 3px 3px 2px rgba(0, 0, 0, 0.5);
   }
   video {

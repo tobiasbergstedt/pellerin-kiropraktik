@@ -1,54 +1,54 @@
 <template>
-  <div id="motivational-img-quote">
-    <div id="overlay">
-      <h1>Kom i kontakt med oss</h1>
-    </div>
-  </div>
+  <HeroSection
+    is-small
+    source="/assets/top-image.png"
+    title="Get in touch with us"
+  />
   <div class="contact-container">
     <div class="left">
-      <h2>Har du några frågor?</h2>
+      <h2>Got any questions?</h2>
       <p>
-        Vi ser gärna att ni hör av er till oss om ni har frågor om oss på
-        Pellerin Kiropraktik, behandling eller kiropraktik överlag. Vet du inte
-        vad nästa steg är? Önskar du mer information om något? Vill du boka in
-        ett besök, men inte hittat någon tid som passar?
+        We would love for you to contact us if you have any questions about us
+        at Pellerin Chiropractic, treatment or chiropractic care in general.
+        Don't know what the next step is? Would you like more information about
+        something? Do you want to schedule a visit, but haven't found a time
+        that suits?
       </p>
-      <h2>Kontakta oss</h2>
+      <h2>Contact us</h2>
       <p>
-        Använd gärna formuläret nedan för att komma i kontakt med oss. Det går
-        även bra att mejla till: info@kfa.nu eller ringa till: 073-720 71 96. Om
-        vi inte har möjlighet att ta emot ditt samtal när du ringer, lämna gärna
-        ett meddelande med namn och telefonnummer, så ringer vi upp så snart vi
-        har möjlighet.
+        Feel free to use the form below to get in touch with us. It is also
+        possible to email: info@kfa.nu or call: 073-720 71 96. If we are unable
+        to receive your call, please leave a message with your name and phone
+        number, and we will call you back as soon as possible.
       </p>
       <div class="container">
         <form ref="form">
-          <label>Namn</label>
+          <label>Name</label>
           <input
             type="text"
             v-model="name"
             name="name"
-            placeholder="Ditt namn"
+            placeholder="Your name"
           />
-          <label>Email</label>
+          <label>E-mail</label>
           <input
             type="email"
             v-model="email"
             name="email"
-            placeholder="Din Email"
+            placeholder="Your e-mail"
             @blur="validateEmail"
           />
-          <label>Meddelande</label>
+          <label>Message</label>
           <textarea
             name="message"
             v-model="message"
             cols="30"
             rows="5"
-            placeholder="Ditt meddelande"
+            placeholder="Your message"
           />
           <p id="formValidation">
-            Alla fält måste fyllas i <u>korrekt</u> för att knappen ska gå att
-            klicka på.
+            All fields must be filled in <u>correctly</u> in order for the
+            button to be clickable.
           </p>
           <input
             type="button"
@@ -93,12 +93,15 @@
   } from '@vue-leaflet/vue-leaflet'
   import 'leaflet/dist/leaflet.css'
   import emailjs from 'emailjs-com/es/index.js'
+  import HeroSection from '../components/HeroSection.vue'
+
   export default {
     components: {
       LMap,
       LTileLayer,
       LMarker,
-      LControlLayers
+      LControlLayers,
+      HeroSection
     },
     data() {
       return {
@@ -141,49 +144,26 @@
     box-sizing: border-box;
   }
 
-  h1 {
-    color: white;
-    text-shadow: 3px 3px 2px rgba(0, 0, 0, 0.5);
-  }
-  #motivational-img-quote {
-    height: 110px;
-    background: url(assets/top-image.png) no-repeat center center;
-    -webkit-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    margin: 0;
-    border-bottom-left-radius: 50% 22%;
-    border-bottom-right-radius: 50% 22%;
-    overflow: hidden;
-    #overlay {
-      background-color: rgba(0, 0, 0, 0.6);
-      height: 100%;
-      width: 100%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-  }
-
   .contact-container {
-    padding: 1rem;
+    padding: 1rem 0;
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 4%;
   }
 
   .container {
     display: block;
     text-align: center;
     border-radius: 0.5rem;
-    background-color: #4f7e84;
+    background-color: var(--color-primary);
     box-shadow: 0px 3px 4px 1px rgba(0, 0, 0, 0.25);
     margin-top: 1.5rem;
     padding: 20px;
     width: 100%;
     p,
     label {
-      color: #fff;
+      color: var(--color-white);
     }
   }
 
@@ -194,7 +174,7 @@
   input[type='text'],
   [type='email'],
   textarea {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Nunito', sans-serif;
     font-size: 1rem;
     width: 100%;
     padding: 12px;
@@ -209,11 +189,12 @@
   .button {
     margin-top: 1rem;
     margin-bottom: 1rem;
-    background-color: white;
-    color: #4f7e84;
+    background-color: var(--color-white);
+    color: var(--color-primary);
+    transition: outline-color 0.35s;
     &:hover,
     &:focus {
-      outline: 3px solid #e3d0b9;
+      outline: 3px solid var(--color-secondary);
     }
   }
 
@@ -242,6 +223,7 @@
   }
 
   #map-container {
+    z-index: 0;
     height: 500px;
     width: 100%;
     box-shadow: 0px 3px 4px 1px rgba(0, 0, 0, 0.25);
@@ -250,7 +232,7 @@
   }
 
   #formValidation {
-    color: white;
+    color: var(--color-white);
     margin-left: auto;
     margin-right: auto;
   }
@@ -275,26 +257,23 @@
       margin-top: 1rem;
       margin-bottom: 1rem;
     }
-    #motivational-img-quote {
-      height: 225px;
-    }
   }
 
   @media screen and (min-width: 1024px) {
     .contact-container {
-      padding: 1rem 10rem;
+      margin-left: auto;
+      margin-right: auto;
     }
     #map-container {
       width: 550px;
       height: 400px;
     }
-    #motivational-img-quote {
-      height: 300px;
-    }
   }
 
   @media screen and (min-width: 1300px) {
     .contact-container {
+      width: 100%;
+      max-width: var(--max-width-container);
       flex-direction: row;
       h2 {
         margin-top: 0.5rem;
@@ -303,30 +282,18 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        width: 80%;
+        width: 48%;
         .container {
-          width: 70%;
+          width: 100%;
         }
         p {
-          width: 70%;
+          width: 100%;
         }
       }
     }
     #map-container {
-      width: 600px;
+      width: 48%;
       height: 660px;
-    }
-  }
-
-  @media screen and (min-width: 1600px) {
-    #map-container {
-      width: 700px;
-    }
-  }
-
-  @media screen and (min-width: 1800px) {
-    #map-container {
-      width: 900px;
     }
   }
 </style>

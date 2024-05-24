@@ -1,9 +1,10 @@
 <template>
-  <div id="motivational-img-quote">
+  <!-- <div id="motivational-img-quote">
     <div id="overlay">
-      <h1>Kiropraktik för alla</h1>
+      <h1>Chiropractic for all</h1>
     </div>
-  </div>
+  </div> -->
+  <HeroSection source="/assets/top-image.png" title="Chiropractic for all" />
   <CardsSection />
   <VideoReviews />
   <MiddleSection />
@@ -15,20 +16,22 @@
   import CardsSection from '../components/CardsSection.vue'
   import VideoReviews from '../components/VideoReviews.vue'
   import MiddleSection from '../components/MiddleSection.vue'
+  import HeroSection from '../components/HeroSection.vue'
 
   export default {
     components: {
       HomeGrid,
       VideoReviews,
       CardsSection,
-      MiddleSection
+      MiddleSection,
+      HeroSection
     }
   }
 </script>
 
 <style lang="scss" scoped>
   h1 {
-    color: white;
+    color: var(--color-white);
     text-shadow: 3px 3px 2px rgba(0, 0, 0, 0.5);
   }
   #motivational-img-quote {

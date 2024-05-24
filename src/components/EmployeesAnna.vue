@@ -2,26 +2,24 @@
   <div class="employees-container">
     <div class="employees-content">
       <div id="left">
-        <slot>
-          <h2>Anna Carlsson</h2>
-          <h3 class="light">M.Sc. Chiro</h3>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat
-            perspiciatis quasi adipisci, sit eaque, ex facere ipsum reiciendis
-            in veritatis cupiditate sequi nisi doloremque repellendus rerum
-            vitae ducimus explicabo aliquam.
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus
-            cupiditate harum dolorem magni nam repellat! Laborum quam placeat
-            itaque! Dolores fugiat necessitatibus ullam molestias, quam libero
-            debitis amet esse labore!
-          </p>
-          <h3 id="last-paragraph">Examen och vidareutbildning</h3>
-          <p>Bachelor of Science, Chiropractic. (Utbildare, Årtal)</p>
-          <p>Master of Science, Chiropractic. (Utbildare, Årtal)</p>
-          <p>Sports Chiropractic. (Utbildare, Årtal)</p>
-        </slot>
+        <h2>Anna Carlsson</h2>
+        <h3 class="light">M.Sc. Chiro</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat
+          perspiciatis quasi adipisci, sit eaque, ex facere ipsum reiciendis in
+          veritatis cupiditate sequi nisi doloremque repellendus rerum vitae
+          ducimus explicabo aliquam.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus
+          cupiditate harum dolorem magni nam repellat! Laborum quam placeat
+          itaque! Dolores fugiat necessitatibus ullam molestias, quam libero
+          debitis amet esse labore!
+        </p>
+        <h3 id="last-paragraph">Examen och vidareutbildning</h3>
+        <p>Bachelor of Science, Chiropractic. (Utbildare, Årtal)</p>
+        <p>Master of Science, Chiropractic. (Utbildare, Årtal)</p>
+        <p>Sports Chiropractic. (Utbildare, Årtal)</p>
       </div>
       <div id="right">
         <img src="/assets/Back+doctor.jpg" alt="Photo of Anna" />
@@ -35,9 +33,9 @@
 <style lang="scss" scoped>
   .employees-container {
     width: 100%;
-    color: white;
+    color: var(--color-white);
     .employees-content {
-      background-color: #4f7e84;
+      background-color: var(--color-primary);
       box-shadow: 0px 3px 4px 1px rgba(0, 0, 0, 0.25);
       border-radius: 1rem;
       padding: 1rem;
