@@ -1,8 +1,7 @@
 <template>
   <!-- <VideoBackground /> -->
   <HeroSection
-    is-video
-    source="/assets/bg-video.mp4"
+    source="/assets/video.png"
     title="What our clients think about us"
   />
   <ReviewCards />
