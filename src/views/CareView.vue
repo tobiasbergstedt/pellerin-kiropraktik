@@ -1,5 +1,5 @@
 <template>
-  <HeroSection source="/assets/top-image.png" title="About chiropractic" />
+  <HeroSection source="assets/top-image.png" title="About chiropractic" />
   <h2 class="about-heading" v-html="pageContent.title" />
   <div v-if="!isLoading" class="about-content" v-html="pageContent.content" />
   <div

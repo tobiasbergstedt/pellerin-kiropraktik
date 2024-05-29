@@ -13,7 +13,7 @@
       },
       source: {
         type: String,
-        default: '/assets/top-image.png'
+        default: 'assets/top-image.png'
       },
       title: {
         type: String,

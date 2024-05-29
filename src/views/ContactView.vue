@@ -1,7 +1,7 @@
 <template>
   <HeroSection
     is-small
-    source="/assets/top-image.png"
+    source="assets/top-image.png"
     title="Get in touch with us"
   />
   <div class="contact-container">

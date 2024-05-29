@@ -1,5 +1,5 @@
 <template>
-  <HeroSection source="/assets/top-image.png" title="About horses" />
+  <HeroSection source="assets/top-image.png" title="About horses" />
   <h2 class="about-heading" v-html="pageContent.title" />
   <div v-if="!isLoading" class="about-content" v-html="pageContent.content" />
   <div

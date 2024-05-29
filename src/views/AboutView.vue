@@ -1,5 +1,5 @@
 <template>
-  <HeroSection source="/assets/top-image2.png" title="Who are we?" />
+  <HeroSection source="assets/top-image2.png" title="Who are we?" />
   <EmployeeTemplate
     v-if="!isLoading"
     :name="employees[0].title.rendered"

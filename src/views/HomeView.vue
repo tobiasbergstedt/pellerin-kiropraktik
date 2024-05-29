@@ -4,7 +4,7 @@
       <h1>Chiropractic for all</h1>
     </div>
   </div> -->
-  <HeroSection source="/assets/top-image.png" title="Chiropractic for all" />
+  <HeroSection source="assets/top-image.png" title="Chiropractic for all" />
   <CardsSection />
   <VideoReviews />
   <MiddleSection />
