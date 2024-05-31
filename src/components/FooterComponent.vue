@@ -1,7 +1,9 @@
 <template>
   <footer>
     <div class="footer-information">
-      <p id="left">Copyright © Pellerin Kiropraktik, 2022-{{ currentYear }}.</p>
+      <p id="left">
+        Copyright © Pellerin Kiropraktik, 2022-{{ currentYear }}.
+      </p>
       <div id="contact-info">
         <a href="tel:+46737207196"><p>073-720 71 96</p></a>
         <p id="distance-between">|</p>

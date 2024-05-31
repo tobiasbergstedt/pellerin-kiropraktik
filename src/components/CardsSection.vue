@@ -80,7 +80,9 @@
         img {
           width: 100%;
           outline: 3px solid var(--color-secondary);
-          transition: outline 0.3s, opacity 0.2s;
+          transition:
+            outline 0.3s,
+            opacity 0.2s;
           &:hover {
             outline: 3px solid #c9ab87;
           }
